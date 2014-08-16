@@ -4,9 +4,13 @@ Jill and the Beanstalk
 Contributors
 ------------
 Ameya Acharya
+
 Elizabeth Ferrao
+
 Tatyana Nuzhnaya
+
 Erica Oh
+
 Diana Wu
 
 Event
