@@ -1,4 +1,15 @@
-Generic HTML Template
-=====================
+Jill and the Beanstalk
+======================
 
-Simple project template for my students. Includes a reset.css and a couple basic styles. Download this repository as a zip to use it.
+Event
+-----
+Project for the Women's Health Codeathon at the Ace Hotel New York, sponsored by Jawbone, Equinox, sweetgreen, SELF magazine, and the Clinton Foundation, among others. August 15-17, 2014.
+
+Prompt
+------
+Design technology that will positively impact women's health issues.
+
+
+
+
+
