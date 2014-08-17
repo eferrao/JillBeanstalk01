@@ -103,7 +103,6 @@
       display: inline-block;
       background-color: #fff; 
       color: #c4e593;
-
     }
 
     #search-bar {
@@ -126,9 +125,22 @@
       padding: 0px 25px 25px 25px;
       background-color: #fff;
       width:600px;
-      height: 300px;
+      height: 270px;
       clear: both;
       overflow: scroll;
+    }
+
+    #reminders-wrapper-div {
+      padding: 0px 25px 25px 25px;
+      background-color: #fff;
+      width:600px;
+      height: 270px;
+      clear: both;
+      overflow: scroll;
+    }
+
+    .reminder {
+      vertical-align:middle;
     }
 
     .profile-display {
@@ -206,21 +218,12 @@
 
       <div class="col-md-5" id="ugh">
         <h1 class="text-muted">Reminders</h1>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> tomatoes
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> basil
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> raspberries
-            </label>
-          </div>
+        <div class="scrollable">
+        <table class="table table-scrollable" id="reminders-list">
+          <tr><td><img src="img/exclamation.png"></td><td class='reminder'>Tomato watering next Monday.</td></tr>
+          <tr><td><img src="img/exclamation.png"></td><td class='reminder'>Radish watering next Tuesday.</td></tr>
+        </table>
+      </div>
      </div>
 
       <div id="searches-display"></div>

@@ -10,8 +10,8 @@ var searches = [];
 
 function appendSearchQuery(query) {
   searches.push(query);
-  var display_div="<div class='search-query'>x " + query + "</div>";
-  $('#searches-display').append(display_div);
+  //var display_div="<div class='search-query'>x " + query + "</div>";
+  //$('#searches-display').append(display_div);
 }
 
 function removeSearchQuery(query) {
