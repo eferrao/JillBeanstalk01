@@ -36,13 +36,6 @@
       top:140px;
     }
 
-    #search-bar {
-      position:relative;
-      background-color: #fff;
-      height: 80px;
-      margin-top: 30px;
-    }
-
     .navbar-form {
       position: absolute;
       top:15px;
@@ -98,15 +91,6 @@
         margin: 0;
     }
 
-    #ugh {
-      position:absolute;
-      background-color: #fff;
-      width:450px;
-      right:15px;
-
-      height: 250px;
-    }
-
     #searches-display {
       height:70px;
       vertical-align: middle;
@@ -119,16 +103,44 @@
       display: inline-block;
       background-color: #fff; 
       color: #c4e593;
+    }
 
+    #search-bar {
+      width:600px;
+      background-color: #fff;
+      height: 80px;
+      margin-top: 30px;
+    }
+
+    #ugh {
+      position:absolute;
+      background-color: #fff;
+      width:450px;
+      right:15px;
+      height: 250px;
+      margin-top:30px;
     }
 
     #results-wrapper-div {
-      padding: 25px 25px 25px 25px;
+      padding: 0px 25px 25px 25px;
       background-color: #fff;
       width:600px;
-      height: 250px;
+      height: 270px;
       clear: both;
       overflow: scroll;
+    }
+
+    #reminders-wrapper-div {
+      padding: 0px 25px 25px 25px;
+      background-color: #fff;
+      width:600px;
+      height: 270px;
+      clear: both;
+      overflow: scroll;
+    }
+
+    .reminder {
+      vertical-align:middle;
     }
 
     .profile-display {
@@ -151,8 +163,16 @@
       display: inline-block;
       font-size: 20px;
       background-color: #c4e593;
+      padding: 5px 10px 5px 10px;
+      color: #303030;
+    }
+
+    .info-icon {
+      display: inline-block;
+      font-size: 20px;
       padding: 5px 5px 5px 5px;
       color: #303030;
+      right:0px;
     }
 
     .name {
@@ -178,7 +198,7 @@
             <li><a href="calendar.html">CALENDAR</a></li>
             <li><a href="#contact">PLANTS</a></li>
             <li class="active"><a href="#contact">CARE</a></li>
-            <li><a href="#contact">SOCIAL</a></li>
+            <li><a href="social.html">SOCIAL</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -186,7 +206,7 @@
 
     <div class="container" id="awesome">
       <!-- Example row of columns -->
-      <div id="search-bar">
+      <div id="search-bar" class="col-md-5">
         <h1 class="text-muted">My Garden</h1>
 
         <form class="navbar-form" role="search">
@@ -194,48 +214,25 @@
             <input class="typeahead form-control" type="text" placeholder="Search" id="searchinput">
           </div>
         </form>
-
       </div>
+
+      <div class="col-md-5" id="ugh">
+        <h1 class="text-muted">Reminders</h1>
+        <div class="scrollable">
+        <table class="table table-scrollable" id="reminders-list">
+          <tr><td><img src="img/exclamation.png"></td><td class='reminder'>Tomato watering next Monday.</td></tr>
+          <tr><td><img src="img/exclamation.png"></td><td class='reminder'>Radish watering next Tuesday.</td></tr>
+        </table>
+      </div>
+     </div>
 
       <div id="searches-display"></div>
 
-
       <div class="col-md-5 scrollable" id="results-wrapper-div">
-        <table class="table table-hover table-scrollable" id="results-list">
-          <tr>
-            <td>
-              <div class='crop'>RADISHES </div>
-              <div class='name'>FULL SPECIES NAME </div>
-              <div class='name'>Planted on June 10th, 2014</div>
-            </td>
-            <td>
-              <div class='days-til-harvest'>15</div>
-              <div class='name'>DAYS TILL HARVEST</div>
-            </td>
-            <td>
-              <div class='days-til-harvest'>ICON</div>
-            </td>
-          </tr>
+        <table class="table table-scrollable" id="results-list">
       </table>
       </div>
-      <div class="col-md-5" id="ugh">
-        <h1 class="text-muted">Reminders</h1>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> tomatoes
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> basil
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> raspberries
-            </label>
-          </div>
-     </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript

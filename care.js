@@ -1,5 +1,5 @@
 var profiles = [
-{"crop":"radishes", "species": "FULL SPECIES NAME", "datePlanted":"June 10th, 2014", "daysTillHarvest":15},
+{"crop":"radishes", "species": "raphanus sativus", "datePlanted":"June 10th, 2014", "daysTillHarvest":15},
 {"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
 {"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
 {"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
@@ -10,8 +10,8 @@ var searches = [];
 
 function appendSearchQuery(query) {
   searches.push(query);
-  var display_div="<div class='search-query'>x " + query + "</div>";
-  $('#searches-display').append(display_div);
+  //var display_div="<div class='search-query'>x " + query + "</div>";
+  //$('#searches-display').append(display_div);
 }
 
 function removeSearchQuery(query) {
@@ -24,10 +24,10 @@ function removeSearchQuery(query) {
 
 function initProfiles() {
   for (var i = 0; i < profiles.length; i++) {
-    var displayed_profile = "<td><div class='crop'>" + profiles[i].crop + 
-    "</div><div class='name'>" + profiles[i].species +
-    "</div><div class='name'>Planted on " + profiles[i].datePlanted + "</div></td><td><div class='days-til-harvest'>"
-    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>ICON</div></td>";
+    var displayed_profile = "<tr><td><div class='crop'>" + profiles[i].crop + 
+    "</div><div class='name'>Planted on " + profiles[i].datePlanted +
+    "</div></td><td><img src='img/statusbar1.png'></td><td><div class='days-til-harvest'>"
+    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='info-icon'><img src='img/infobutton.png'></div></td></tr>";
     $('#results-list').append(displayed_profile);
   }
 }
