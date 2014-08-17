@@ -1,10 +1,12 @@
 var profiles = [
-{"crop":"RADISHES", "species": "raphanus sativus", "datePlanted":"June 10th, 2014", "daysTillHarvest":15, "sbar": 1},
-{"crop":"BASIL", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":4, "sbar": 3},
-{"crop":"TOMATOES", "species": "FULL SPECIES NAME", "datePlanted":"June 30th, 2014", "daysTillHarvest":25, "sbar": 2},
-{"crop":"PEAS", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":9, "sbar":2},
-{"crop":"MUSKMELONS", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":31, "sbar":1},
-{"crop":"POTATOES", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":17, "sbar":3}];
+{"crop":"radishes", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
+{"crop":"basil", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"},
+{"crop":"potatoes", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
+{"crop":"carrots", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"},
+{"crop":"muskmelons", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
+{"crop":"peppers", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"},
+{"crop":"strawberries", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
+{"crop":"cucumbers", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"}];
 
 var searches = [];
 
@@ -25,11 +27,36 @@ function removeSearchQuery(query) {
 function initProfiles() {
   for (var i = 0; i < profiles.length; i++) {
     var displayed_profile = "<tr><td><div class='crop'>" + profiles[i].crop + 
-    "</div><div class='name'>Planted on " + profiles[i].datePlanted +
-    "</div></td><td><img src='img/statusbar" + profiles[i].sbar + ".png'></td><td><div class='days-til-harvest'>"
-    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='info-icon'><img src='img/infobutton.png'></div></td></tr>";
+    "</div><div class='name'>" + profiles[i].datePlanted +
+    "</div></td><td><div class='days-til-harvest'>"
+    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>" + profiles[i].savings + "</div><div class='name'>DAYS TILL HARVEST</div></td></tr>";
     $('#results-list').append(displayed_profile);
   }
+}
+
+function updateProfiles() {
+  displayedProfiles = [];
+  profiles.forEach(function(profile) {
+    var crops = profile.crop;
+    for (var i = 0; i < searches.length; i++) {
+      if (searches[i] === crops) {
+        displayedProfiles.push(profile);
+      }
+    }
+  })
+  console.log(displayedProfiles);
+  $('#results-list tr').remove();
+  for (var i = 0; i < displayedProfiles.length; i++) {
+    var displayed_profile = "<tr><td><div class='crop'>" + displayedProfiles[i].crop + 
+    "</div><div class='name'>" + displayedProfiles[i].datePlanted +
+    "</div></td><td><div class='days-til-harvest'>"
+    +displayedProfiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>" + displayedProfiles[i].savings + "</div><div class='name'>DAYS TILL HARVEST</div></td></tr>";
+    $('#results-list').append(displayed_profile);
+  }
+  if (displayedProfiles.length == 0) {
+    initProfiles();
+  }
+  searches = [];
 }
 
 function hasCommonElement(arr1, arr2) {
