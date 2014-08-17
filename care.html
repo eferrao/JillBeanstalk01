@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Care</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+    <!--CUSTOM FONT-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <style>
+
+    .navbar {
+      line-height:140px;
+      height:140px;
+      padding-top:0;
+    }
+
+    .container {
+      position:relative;
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      top:80px;
+      bottom:0;
+      right:0;
+    }
+
+    #awesome {
+      top:140px;
+    }
+
+    #search-bar {
+      position:relative;
+      background-color: #fff;
+      height: 80px;
+      margin-top: 30px;
+    }
+
+    .navbar-form {
+      position: absolute;
+      top:15px;
+      right:0px;
+    }
+
+    h1 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
+
+    .tt-query {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+
+    .tt-hint {
+        color: #999
+    }
+
+    .tt-dropdown-menu {
+        width: 200px;
+        margin-top: 12px;
+        padding: 8px 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .tt-suggestion > p:hover,
+    .tt-suggestion > p:focus,
+    .tt-suggestion.tt-cursor p {
+      color: #00a551;
+      text-decoration: none;
+      outline: 0;
+    }
+
+    .tt-suggestion {
+        padding: 3px 20px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .tt-suggestion.tt-is-under-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
+        color: #fff;
+        background-color: #0097cf;
+
+    }
+
+    .tt-suggestion p {
+        margin: 0;
+    }
+
+    #ugh {
+      position:absolute;
+      background-color: #fff;
+      width:450px;
+      right:15px;
+
+      height: 250px;
+    }
+
+    #searches-display {
+      height:70px;
+      vertical-align: middle;
+      display: table-cell;
+    }
+
+    .search-query {
+      padding: 5px 5px 5px 5px;
+      margin-left:15px;
+      display: inline-block;
+      background-color: #fff; 
+      color: #c4e593;
+
+    }
+
+    #results-wrapper-div {
+      padding: 25px 25px 25px 25px;
+      background-color: #fff;
+      width:600px;
+      height: 250px;
+      clear: both;
+      overflow: scroll;
+    }
+
+    .profile-display {
+
+    }
+
+    .checkbox {
+      margin-left:40px;
+    }
+
+    .crop {
+      display: inline-block;
+      font-size: 16px;
+      background-color: #fff;
+      padding: 2px 2px 2px 5px;
+      color: #c4e593;
+    }
+
+    .days-til-harvest {
+      display: inline-block;
+      font-size: 20px;
+      background-color: #c4e593;
+      padding: 5px 5px 5px 5px;
+      color: #303030;
+    }
+
+    .name {
+      padding-top: 2px;
+      font-size:12px;
+      clear:both;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="beanstock_logo.png" alt="Beanstock"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">PROFILE</a></li>
+            <li><a href="calendar.html">CALENDAR</a></li>
+            <li><a href="#contact">PLANTS</a></li>
+            <li class="active"><a href="#contact">CARE</a></li>
+            <li><a href="#contact">SOCIAL</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container" id="awesome">
+      <!-- Example row of columns -->
+      <div id="search-bar">
+        <h1 class="text-muted">My Garden</h1>
+
+        <form class="navbar-form" role="search">
+          <div class="input-group add-on" id="the-basics">
+            <input class="typeahead form-control" type="text" placeholder="Search" id="searchinput">
+          </div>
+        </form>
+
+      </div>
+
+      <div id="searches-display"></div>
+
+
+      <div class="col-md-5 scrollable" id="results-wrapper-div">
+        <table class="table table-hover table-scrollable" id="results-list">
+          <tr>
+            <td>
+              <div class='crop'>TOMATOES </div>
+              <div class='name'>by ERICA O </div>
+              <div class='name'>ASK TO SHARE</div>
+            </td>
+            <td>
+              <div class='days-til-harvest'>25</div>
+              <div class='name'>DAYS TILL HARVEST</div>
+            </td>
+            <td>
+              <div class='days-til-harvest'>5 SERVINGS</div>
+              <div class='name'>POTENTIAL YIELD</div>
+            </td>
+          </tr>
+      </table>
+      </div>
+      <div class="col-md-5" id="ugh">
+        <h1 class="text-muted">Reminders</h1>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> tomatoes
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> basil
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> raspberries
+            </label>
+          </div>
+     </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="typeahead.bundle.js"></script>
+    <script src="care.js"></script>
+    <script src="bootstrap/css/bootstrap.js"></script>
+  
+
+</body></html>

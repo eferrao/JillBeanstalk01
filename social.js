@@ -16,7 +16,17 @@ var profiles = [
 {"name":"Liz F.", "crops":[{"crop":"cucumbers", "daysTillHarvest": 18, "servings":7}]},
 {"name":"Michelle C.", "crops":[{"crop":"cucumbers", "daysTillHarvest": 8, "servings":2}]},
 {"name":"Liz F.", "crops":[{"crop":"cucumbers", "daysTillHarvest": 18, "servings":7}]},
-{"name":"Michelle C.", "crops":[{"crop":"cucumbers", "daysTillHarvest": 8, "servings":2}]}
+{"name":"Michelle C.", "crops":[{"crop":"cucumbers", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Michael B.", "crops":[{"crop":"potatoes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Ameya A.", "crops":[{"crop":"potatoes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Koko N.", "crops":[{"crop":"potatoes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Lucy L.", "crops":[{"crop":"potatoes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Peter Q.", "crops":[{"crop":"potatoes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Michelle C.", "crops":[{"crop":"potatoes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Michelle C.", "crops":[{"crop":"radishes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Michelle C.", "crops":[{"crop":"radishes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Michelle C.", "crops":[{"crop":"radishes", "daysTillHarvest": 8, "servings":2}]},
+{"name":"Michelle C.", "crops":[{"crop":"radishes", "daysTillHarvest": 8, "servings":2}]}
 ]
 
 var searches = [];
