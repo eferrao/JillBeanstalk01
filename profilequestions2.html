@@ -9,9 +9,12 @@
     <!-- Bootstrap -->
     <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="js/awesome-bootstrap-checkbox.css" rel="stylesheet">
 
     <!--CUSTOM FONT-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 
     <style>
 
@@ -61,6 +64,10 @@
 
     .tt-hint {
         color: #999
+    }
+
+    #awesome {
+      top:140px;
     }
 
     .tt-dropdown-menu {
@@ -121,9 +128,6 @@
       color: #c4e593;
 
     }
-    h4 {
-      display:inline-block;
-    }
 
     #results-wrapper-div {
       padding: 25px 25px 25px 25px;
@@ -171,6 +175,36 @@
       height:80px;
     }
 
+    .profilecard {
+      height: 700px; 
+      padding-top: 200px; 
+      width: 800px; 
+      border: 10px solid green; 
+      text-align: center;
+      background-color: white; 
+      margin: 0px auto;  
+    }
+
+    .profilequestion {
+      color: green; 
+      font-size: 30px; 
+      margin-bottom: 50px; 
+    }
+
+
+    #Next {
+      font-size: 100px; 
+    }
+
+    .profilerelevance {
+      font-size: 20px; 
+      width: 600px; 
+      margin: 0px auto; 
+      margin-top: 100px; 
+      margin-bottom: 0px; 
+    }
+    }
+
     </style>
 
   </head>
@@ -184,62 +218,51 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#about">PROFILE</a></li>
+            <li class="active"><a href="#about">PROFILE</a></li>
             <li><a href="calendar.html">CALENDAR</a></li>
-            <li><a href="plants.html">PLANTS</a></li>
-            <li><a href="care.html">CARE</a></li>
-            <li class="active"><a href="#contact">SOCIAL</a></li>
+            <li><a href="#contact">PLANTS</a></li>
+            <li><a href="#contact">CARE</a></li>
+            <li><a href="#contact">SOCIAL</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container" id="awesome">
-      <!-- Example row of columns -->
-      <div id="search-bar">
-        <h1 class="text-muted">What are you looking for?</h1>
+    <div class="profilecard">
+        
+      <div class="pretty"> 
+        <div class="profilequestion"> 
+          <p> What is your zip code? </p>
+        </div> 
 
-        <form class="navbar-form" role="search">
-          <div class="input-group add-on" id="the-basics">
-            <input class="typeahead form-control" type="text" placeholder="Search" id="searchinput">
-          </div>
-        </form>
+        <div>
+          <form> <input type="text" size="50" height="60" value="Ex: 10003">
+          </form> 
+        </div>
 
-      </div>
-      <div id="searches-display"><h4 class="text-muted">Tags:</h4></div>
+        <div class="profilerelevance"> 
+          <p> ==> Plants have environments that they prefer too. This will help us recommend the plants that grow best in your area <== </p>
+        </div> 
 
+        <div id="Next"><p> > </p></div>
+          
+      </div> 
 
-      <div class="col-md-5 scrollable" id="results-wrapper-div">
-        <table class="table table-hover table-scrollable" id="results-list">
-      </table>
-      </div>
-      <div class="col-md-5" id="ugh">
-        <h1 class="text-muted">Share your crops</h1>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> tomatoes
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> basil
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> raspberries
-            </label>
-          </div>
-     </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/profilequestions.js"></script>
     <script src="js/typeahead.bundle.js"></script>
     <script src="js/social.js"></script>
     <script src="js/bootstrap/js/bootstrap.js"></script>
+    <script src="js/bootstrap/css/bootstrap.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
   
 
 </body></html>
