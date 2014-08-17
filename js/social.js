@@ -72,6 +72,9 @@ function updateProfiles() {
     "</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>"+displayedProfiles[i].crops[0].servings+" servings</div><div class='name'>POTENTIAL YIELD</div></td></tr>";
     $('#results-list').append(displayed_profile);
   }
+  if (displayedProfiles.length == 0) {
+    initProfiles();
+  }
 }
 
 function hasCommonElement(arr1, arr2) {
