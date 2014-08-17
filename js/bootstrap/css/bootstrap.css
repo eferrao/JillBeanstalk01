@@ -20,6 +20,7 @@ div {
 
 html {
   font-family: sans-serif;
+  letter-spacing: 0.5px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -3577,8 +3578,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
+  letter-spacing: 6px;
+  font-size: 88%;
   margin-bottom: 0;
-  padding-left: 0;
   list-style: none;
 }
 .nav > li {
