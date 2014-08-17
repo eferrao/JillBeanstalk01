@@ -45,6 +45,16 @@ function removeSearchQuery(query) {
   }
 }
 
+function initProfiles() {
+  displayedProfiles = profiles;
+  for (var i = 0; i < displayedProfiles.length; i++) {
+    var displayed_profile="<tr><td><div class='crop'>" + displayedProfiles[i].crops[0].crop+"</div><div class='name'> by "+
+    displayedProfiles[i].name+"</div><div class='name'>ASK TO SHARE</div></td><td><div class='days-til-harvest'>"+displayedProfiles[i].crops[0].daysTillHarvest+
+    "</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>"+displayedProfiles[i].crops[0].servings+" servings</div><div class='name'>POTENTIAL YIELD</div></td></tr>";
+    $('#results-list').append(displayed_profile);
+  }
+}
+
 function updateProfiles() {
   displayedProfiles = [];
   profiles.forEach(function(profile) {
@@ -106,6 +116,10 @@ var vegetables = ['radishes', 'lettuce', 'onions', 'peas', 'spinach', 'cabbages'
 'cucumbers', 'turnips', 'strawberries', 'blueberries', 'rosemary', 'zucchini', 'watermelon', 'pumpkin',
 'squash', 'peppers', 'muskmelons', 'lima beans', 'raspberries'
 ];
+
+$( document ).ready(function() {
+    initProfiles();
+});
  
 $('#the-basics .typeahead').typeahead({
   hint: true,

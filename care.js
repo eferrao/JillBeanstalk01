@@ -1,6 +1,10 @@
 var profiles = [
-{"crop":"radishes", "species": "FULL SPECIES NAME", "datePlanted":"June 10th, 2014", "daysTillHarvest":15
-{"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25}]
+{"crop":"radishes", "species": "FULL SPECIES NAME", "datePlanted":"June 10th, 2014", "daysTillHarvest":15},
+{"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
+{"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
+{"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
+{"crop":"tomatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25},
+{"crop":"potatoes", "species": "FULL SPECIES NAME", "datePlanted":"July 8th, 2014", "daysTillHarvest":25}];
 
 var searches = [];
 
@@ -18,21 +22,12 @@ function removeSearchQuery(query) {
   }
 }
 
-function updateProfiles() {
-  displayedProfiles = [];
-  profiles.forEach(function(profile) {
-    var crops = profile.crops;
-    for (var i = 0; i < searches.length; i++) {
-      if (searches[i] == crops[0].crop) {
-        displayedProfiles.push(profile);
-      }
-    }
-  })
-  $('#results-list tr').remove();
-  for (var i = 0; i < displayedProfiles.length; i++) {
-    var displayed_profile="<tr><td><div class='crop'>" + displayedProfiles[i].crops[0].crop+"</div><div class='name'> by "+
-    displayedProfiles[i].name+"</div><div class='name'>ASK TO SHARE</div></td><td><div class='days-til-harvest'>"+displayedProfiles[i].crops[0].daysTillHarvest+
-    "</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>"+displayedProfiles[i].crops[0].servings+" servings</div><div class='name'>POTENTIAL YIELD</div></td></tr>";
+function initProfiles() {
+  for (var i = 0; i < profiles.length; i++) {
+    var displayed_profile = "<td><div class='crop'>" + profiles[i].crop + 
+    "</div><div class='name'>" + profiles[i].species +
+    "</div><div class='name'>Planted on " + profiles[i].datePlanted + "</div></td><td><div class='days-til-harvest'>"
+    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>ICON</div></td>";
     $('#results-list').append(displayed_profile);
   }
 }
@@ -80,6 +75,10 @@ var vegetables = ['radishes', 'lettuce', 'onions', 'peas', 'spinach', 'cabbages'
 'squash', 'peppers', 'muskmelons', 'lima beans', 'raspberries'
 ];
  
+
+ $( document ).ready(function() {
+    initProfiles();
+});
 $('#the-basics .typeahead').typeahead({
   hint: true,
   highlight: true,
