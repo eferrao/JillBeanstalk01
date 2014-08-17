@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Social</title>
+
+    <!-- Bootstrap -->
+    <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="js/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+    <!--CUSTOM FONT-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+
+    <style>
+
+    .navbar {
+      line-height:140px;
+      height:140px;
+      padding-top:0;
+    }
+
+    .container {
+      position:relative;
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      top:80px;
+      bottom:0;
+      right:0;
+    }
+
+    #awesome {
+      top:140px;
+    }
+
+    #search-bar {
+      position:relative;
+      background-color: #fff;
+      height: 80px;
+      margin-top: 30px;
+    }
+
+    .navbar-form {
+      position: absolute;
+      top:15px;
+      right:0px;
+    }
+
+    h1 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
+
+    .tt-query {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+
+    .tt-hint {
+        color: #999
+    }
+
+    #awesome {
+      top:140px;
+    }
+
+    .tt-dropdown-menu {
+        width: 200px;
+        margin-top: 12px;
+        padding: 8px 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .tt-suggestion > p:hover,
+    .tt-suggestion > p:focus,
+    .tt-suggestion.tt-cursor p {
+      color: #00a551;
+      text-decoration: none;
+      outline: 0;
+    }
+
+    .tt-suggestion {
+        padding: 3px 20px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .tt-suggestion.tt-is-under-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
+        color: #fff;
+        background-color: #0097cf;
+
+    }
+
+    .tt-suggestion p {
+        margin: 0;
+    }
+
+    #ugh {
+      position:absolute;
+      background-color: #fff;
+      width:450px;
+      right:15px;
+
+      height: 250px;
+    }
+
+    #searches-display {
+      height:70px;
+      vertical-align: middle;
+      display: table-cell;
+    }
+
+    .search-query {
+      padding: 5px 5px 5px 5px;
+      margin-left:15px;
+      display: inline-block;
+      background-color: #fff; 
+      color: #c4e593;
+
+    }
+
+    #results-wrapper-div {
+      padding: 25px 25px 25px 25px;
+      background-color: #fff;
+      width:600px;
+      height: 250px;
+      clear: both;
+      overflow: scroll;
+    }
+
+    .profile-display {
+
+    }
+
+    .checkbox {
+      margin-left:40px;
+    }
+
+    .crop {
+      display: inline-block;
+      font-size: 16px;
+      background-color: #fff;
+      padding: 2px 2px 2px 5px;
+      color: #c4e593;
+    }
+
+    .days-til-harvest {
+      display: inline-block;
+      font-size: 20px;
+      background-color: #c4e593;
+      padding: 5px 5px 5px 5px;
+      color: #303030;
+    }
+
+    .name {
+      padding-top: 2px;
+      font-size:12px;
+      clear:both;
+    }
+
+    tr {
+      background-color: #d3d3d3;
+      line-height:80px;
+      min-height: 80px;
+      height:80px;
+    }
+
+    .profilecard {
+      height: 700px; 
+      padding-top: 200px; 
+      width: 800px; 
+      border: 10px solid green; 
+      text-align: center;
+      background-color: white; 
+      margin: 0px auto;  
+    }
+
+    .profilequestion {
+      color: green; 
+      font-size: 30px; 
+      margin-bottom: 50px; 
+    }
+
+    #profileimages {
+      height: 200px; 
+      padding-bottom: 50px; 
+      padding-left: 10px; 
+    }
+
+    #Next {
+      font-size: 100px; 
+    }
+
+    .profilerelevance {
+      font-size: 20px; 
+      width: 600px; 
+      margin: 0px auto; 
+    }
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="img/beanstock_logo.png" alt="Beanstock"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#about">PROFILE</a></li>
+            <li><a href="calendar.html">CALENDAR</a></li>
+            <li><a href="#contact">PLANTS</a></li>
+            <li><a href="#contact">CARE</a></li>
+            <li><a href="#contact">SOCIAL</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="profilecard">
+        
+      <div class="pretty"> 
+        <div class="profilequestion"> 
+          <p> How many people are you supporting? </p>
+        </div> 
+
+        <div>
+          <img id="profileimages" src="img/stick_figure.png"/> 
+          <img id="profileimages" src="img/stick_figure.png"/> 
+          <img id="profileimages" src="img/stick_figure.png"/> 
+          <img id="profileimages" src="img/stick_figure.png"/> 
+          <img id="profileimages" src="img/stick_figure.png"/> 
+        </div>
+
+        <div class="profilerelevance"> 
+          <p> ==> Providing this will help us recommend enough food to meet your entire family’s needs <== </p>
+        </div> 
+
+        <div id="Next"><p> > </p></div>
+          
+      </div> 
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/profilequestions.js"></script>
+    <script src="js/typeahead.bundle.js"></script>
+    <script src="js/social.js"></script>
+    <script src="js/bootstrap/js/bootstrap.js"></script>
+    <script src="js/bootstrap/css/bootstrap.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+  
+
+</body></html>
