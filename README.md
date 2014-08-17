@@ -5,6 +5,8 @@ Contributors
 ------------
 Ameya Acharya
 
+Michelle Cortese
+
 Elizabeth Ferrao
 
 Tatyana Nuzhnaya
