@@ -1,12 +1,26 @@
 var profiles = [
-{"crop":"radishes", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
-{"crop":"basil", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"},
-{"crop":"potatoes", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
-{"crop":"carrots", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"},
-{"crop":"muskmelons", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
-{"crop":"peppers", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"},
-{"crop":"strawberries", "species": "raphanus sativus", "datePlanted":"Grows indoors", "daysTillHarvest":15, "savings": "$25 PER MEAL"},
-{"crop":"cucumbers", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":4, "savings": "$25 PERMEAL"}];
+{"crop":"basil", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":16, "savings": "$5 PERMEAL"},
+{"crop":"beets", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$6 PER MEAL"},
+{"crop":"blueberries", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":28, "savings": "$14 PER MEAL"},
+{"crop":"broccoli", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":24, "savings": "$5 PER MEAL"},
+{"crop":"carrots", "species": "FULL SPECIES NAME", "datePlanted":"Grows outdoors", "daysTillHarvest":14, "savings": "$14 PERMEAL"},
+{"crop":"cauliflower", "species": "FULL SPECIES NAME", "datePlanted":"Grows outdoors", "daysTillHarvest":14, "savings": "$14 PERMEAL"},
+{"crop":"collards", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"lettuce", "species": "FULL SPECIES NAME", "datePlanted":"Grows outdoors", "daysTillHarvest":16, "savings": "$8 PERMEAL"},
+{"crop":"muskmelons", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":8, "savings": "$8 PER MEAL"},
+{"crop":"peas", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":24, "savings": "$17 PERMEAL"},
+{"crop":"peppers", "species": "FULL SPECIES NAME", "datePlanted":"Grows indoors", "daysTillHarvest":24, "savings": "$17 PERMEAL"},
+{"crop":"potatoes", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"pumpkin", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"radishes", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":26, "savings": "$25 PER MEAL"},
+{"crop":"raspberries", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"rosemary", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"squash", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"strawberries", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":19, "savings": "$10 PER MEAL"},
+{"crop":"tomatoes", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"turnips", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"watermelon", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},
+{"crop":"zucchini", "species": "raphanus sativus", "datePlanted":"Grows outdoors", "daysTillHarvest":31, "savings": "$12 PER MEAL"},];
 
 var searches = [];
 
@@ -27,9 +41,9 @@ function removeSearchQuery(query) {
 function initProfiles() {
   for (var i = 0; i < profiles.length; i++) {
     var displayed_profile = "<tr><td><div class='crop'>" + profiles[i].crop + 
-    "</div><div class='name'>" + profiles[i].datePlanted +
+    " +</div><div class='name'>" + profiles[i].datePlanted +
     "</div></td><td><div class='days-til-harvest'>"
-    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>" + profiles[i].savings + "</div><div class='name'>DAYS TILL HARVEST</div></td></tr>";
+    +profiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>" + profiles[i].savings + "</div><div class='name'>POTENTIAL SAVINGS</div></td></tr>";
     $('#results-list').append(displayed_profile);
   }
 }
@@ -48,7 +62,7 @@ function updateProfiles() {
   $('#results-list tr').remove();
   for (var i = 0; i < displayedProfiles.length; i++) {
     var displayed_profile = "<tr><td><div class='crop'>" + displayedProfiles[i].crop + 
-    "</div><div class='name'>" + displayedProfiles[i].datePlanted +
+    " +</div><div class='name'>" + displayedProfiles[i].datePlanted +
     "</div></td><td><div class='days-til-harvest'>"
     +displayedProfiles[i].daysTillHarvest+"</div><div class='name'>DAYS TILL HARVEST</div></td><td><div class='days-til-harvest'>" + displayedProfiles[i].savings + "</div><div class='name'>DAYS TILL HARVEST</div></td></tr>";
     $('#results-list').append(displayed_profile);
