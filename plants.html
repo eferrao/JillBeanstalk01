@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Social</title>
+    <title>Plants</title>
 
     <!-- Bootstrap -->
     <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="awesome-bootstrap-checkbox.css" rel="stylesheet">
-    <link href="js/awesome-bootstrap-checkbox.css" rel="stylesheet">
 
     <!--CUSTOM FONT-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -35,13 +34,6 @@
 
     #awesome {
       top:140px;
-    }
-
-    #search-bar {
-      position:relative;
-      background-color: #fff;
-      height: 80px;
-      margin-top: 30px;
     }
 
     .navbar-form {
@@ -99,15 +91,6 @@
         margin: 0;
     }
 
-    #ugh {
-      position:absolute;
-      background-color: #fff;
-      width:450px;
-      right:15px;
-
-      height: 250px;
-    }
-
     #searches-display {
       height:70px;
       vertical-align: middle;
@@ -120,16 +103,37 @@
       display: inline-block;
       background-color: #fff; 
       color: #c4e593;
+    }
 
+    #search-bar {
+      display:inline-block;
+      width:500px;
+      background-color: #fff;
+      height: 80px;
+      margin-top: 50px;
+      right:-100px;
     }
 
     #results-wrapper-div {
-      padding: 25px 25px 25px 25px;
+      padding: 0px 25px 25px 25px;
+      background-color: #fff;
+      width:500px;
+      height: 365px;
+      overflow: scroll;
+      right:-100px;
+    }
+
+    #reminders-wrapper-div {
+      padding: 0px 25px 25px 25px;
       background-color: #fff;
       width:600px;
-      height: 250px;
+      height: 270px;
       clear: both;
       overflow: scroll;
+    }
+
+    .reminder {
+      vertical-align:middle;
     }
 
     .profile-display {
@@ -144,16 +148,24 @@
       display: inline-block;
       font-size: 16px;
       background-color: #fff;
-      padding: 2px 2px 2px 5px;
-      color: #c4e593;
+      padding: 2px 5px 2px 5px;
+      color: #dbea53;
     }
 
     .days-til-harvest {
       display: inline-block;
       font-size: 20px;
-      background-color: #c4e593;
+      background-color: #dbea53;
+      padding: 5px 10px 5px 10px;
+      color: #303030;
+    }
+
+    .info-icon {
+      display: inline-block;
+      font-size: 20px;
       padding: 5px 5px 5px 5px;
       color: #303030;
+      right:0px;
     }
 
     .name {
@@ -162,7 +174,7 @@
       clear:both;
     }
 
-    tr {
+        tr {
       background-color: #d3d3d3;
       line-height:80px;
       min-height: 80px;
@@ -184,52 +196,35 @@
           <ul class="nav navbar-nav">
             <li><a href="#about">PROFILE</a></li>
             <li><a href="calendar.html">CALENDAR</a></li>
-            <li><a href="plants.html">PLANTS</a></li>
+            <li class="active"><a href="plants.html">PLANTS</a></li>
             <li><a href="care.html">CARE</a></li>
-            <li class="active"><a href="#contact">SOCIAL</a></li>
+            <li><a href="social.html">SOCIAL</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
     <div class="container" id="awesome">
-      <!-- Example row of columns -->
-      <div id="search-bar">
-        <h1 class="text-muted">What are you looking for?</h1>
 
+      <div class="col-md-5" float="left">
+        <img src="img/addplants_menu.png">
+      </table>
+      </div>
+      <!-- Example row of columns -->
+      <div id="search-bar" class="col-md-3" float="right">
+        <h1 class="text-muted">Add plants</h1>
         <form class="navbar-form" role="search">
           <div class="input-group add-on" id="the-basics">
             <input class="typeahead form-control" type="text" placeholder="Search" id="searchinput">
           </div>
         </form>
-
       </div>
 
-      <div id="searches-display"></div>
-
-
-      <div class="col-md-5 scrollable" id="results-wrapper-div">
+      <div class="col-md-5 scrollable" id="results-wrapper-div" float="right">
         <table class="table table-hover table-scrollable" id="results-list">
       </table>
       </div>
-      <div class="col-md-5" id="ugh">
-        <h1 class="text-muted">Share your crops</h1>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> tomatoes
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> basil
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> raspberries
-            </label>
-          </div>
-     </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript
@@ -237,9 +232,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/typeahead.bundle.js"></script>
-    <script src="js/social.js"></script>
+    <script src="js/plants.js"></script>
     <script src="js/bootstrap/js/bootstrap.js"></script>
-    <script src="js/bootstrap/css/bootstrap.js"></script>
   
 
 </body></html>
